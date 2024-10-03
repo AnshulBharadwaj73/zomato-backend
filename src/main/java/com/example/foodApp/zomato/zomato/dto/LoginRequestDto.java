@@ -1,0 +1,10 @@
+package com.example.foodApp.zomato.zomato.dto;
+
+import lombok.Data;
+
+@Data
+public class LoginRequestDto {
+
+    private String email;
+    private String password;
+}
