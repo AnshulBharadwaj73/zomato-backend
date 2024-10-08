@@ -19,6 +19,7 @@ public class PaymentStrategyManager {
             case DEBIT -> null;
             case UPI -> upiDiscountStrategy;
             case COD -> codDiscountStrategy;
+            default -> throw new IllegalArgumentException("Unknown payment method: " + paymentMethod);
         };
     }
 }
