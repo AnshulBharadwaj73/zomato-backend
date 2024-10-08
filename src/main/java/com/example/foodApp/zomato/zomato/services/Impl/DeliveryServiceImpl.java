@@ -1,6 +1,7 @@
 package com.example.foodApp.zomato.zomato.services.Impl;
 
 import com.example.foodApp.zomato.zomato.dto.DeliveryRequestDto;
+import com.example.foodApp.zomato.zomato.dto.DeliveryResponseDto;
 import com.example.foodApp.zomato.zomato.dto.OtpDto;
 import com.example.foodApp.zomato.zomato.entities.*;
 import com.example.foodApp.zomato.zomato.entities.enums.DeliveryStatus;
@@ -36,7 +37,7 @@ public class DeliveryServiceImpl implements DeliveryService {
     private final ModelMapper modelMapper;
 
     @Override
-    public DeliveryRequestDto acceptDeliveryByDeliveryBoy(Long orderRequestId,DeliveryRequestDto deliveryRequestDto) {
+    public DeliveryResponseDto acceptDeliveryByDeliveryBoy(Long orderRequestId, DeliveryRequestDto deliveryRequestDto) {
         DeliveryBoy deliveryBoy = getCurrentDeliveryBoy();
         if(!deliveryBoy.getIsAvailable()){
             throw new RuntimeException("delivery Boy with id not found");
@@ -77,7 +78,7 @@ public class DeliveryServiceImpl implements DeliveryService {
 
         DeliveryRequest savedRequest = deliveryRequestRepository.save(deliveryRequest);
 
-        return modelMapper.map(savedRequest, DeliveryRequestDto.class);
+        return modelMapper.map(savedRequest, DeliveryResponseDto.class);
 
     }
 
