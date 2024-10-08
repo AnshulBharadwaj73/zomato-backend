@@ -4,6 +4,7 @@ package com.example.foodApp.zomato.zomato.controller;
 import com.example.foodApp.zomato.zomato.advices.ApiResponse;
 import com.example.foodApp.zomato.zomato.dto.OrderRequestDto;
 import com.example.foodApp.zomato.zomato.services.OrderRequestService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/order")
+@Tag(name = "Order APIs")
 public class OrderController {
 
     public final OrderRequestService orderRequestService;

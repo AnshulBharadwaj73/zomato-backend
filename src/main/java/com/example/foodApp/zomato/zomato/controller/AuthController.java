@@ -5,6 +5,7 @@ import com.example.foodApp.zomato.zomato.dto.LoginResponseDto;
 import com.example.foodApp.zomato.zomato.dto.UserDto;
 import com.example.foodApp.zomato.zomato.dto.UserRequestDto;
 import com.example.foodApp.zomato.zomato.services.AuthUserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -23,6 +24,7 @@ import java.util.Arrays;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@Tag(name = "User APIs")
 public class AuthController {
 
     private final AuthUserService authUserService;

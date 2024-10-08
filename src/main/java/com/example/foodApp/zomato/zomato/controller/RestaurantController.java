@@ -10,6 +10,7 @@ import com.example.foodApp.zomato.zomato.repositories.RestaurantRepository;
 import com.example.foodApp.zomato.zomato.services.CartService;
 import com.example.foodApp.zomato.zomato.services.MenuService;
 import com.example.foodApp.zomato.zomato.services.RestaurantService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/restaurant")
 @RequiredArgsConstructor
+@Tag(name = "Restaurant APIs")
 public class RestaurantController {
 
     private final RestaurantService restaurantService;

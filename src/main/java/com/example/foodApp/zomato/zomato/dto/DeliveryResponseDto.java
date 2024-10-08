@@ -10,10 +10,12 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DeliveryRequestDto {
+public class DeliveryResponseDto {
 
-
+    private OrderRequestDto orderRequestDto;
+    private DeliveryBoyDto deliveryBoyDto;
+    private LocalDateTime pickupTime;
     private PointDto pickupLocation;
     private PointDto dropOffLocation;
-
+    private DeliveryStatus deliveryStatus;
 }
