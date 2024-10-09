@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>zomato</name>
 	<description>Backend Service for Food App</description>
-	<url/>
+	<packaging>war</packaging>
 	<licenses>
 		<license/>
 	</licenses>
