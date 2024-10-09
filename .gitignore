@@ -1,8 +1,16 @@
 HELP.md
+# Ignore all target directories
 target/
+
+# Allow Maven wrapper JAR to be tracked
 !.mvn/wrapper/maven-wrapper.jar
+
+# Allow target directories under src/main and src/test to be tracked
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+# Track the application.properties file
+!src/main/resources/application.properties
 
 ### STS ###
 .apt_generated
